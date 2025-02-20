@@ -14,6 +14,10 @@ export default defineUserConfig({
             text: '首页',
             link: '/',
           },
+          {
+            text: '人文社科',
+            link: '/humanities/',
+          },
         ],
       }),
 })
