@@ -8,7 +8,7 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "deploy": "gh-pages -d .vuepress/dist"
+    "deploy": "gh-pages -d ./docs/.vuepress/dist"
   },
   "name": "hwang-blog",
   "version": "1.0.0",
