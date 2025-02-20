@@ -4,20 +4,29 @@ import { defineUserConfig } from 'vuepress'
 
 export default defineUserConfig({
     bundler: viteBundler(),
-    theme: defaultTheme(),
     // dest: '../hwang.github.io.pages/',
     // public: './',
+    hostname: 'https://blog-docs.github.io/pages/',
+    locales: {
+        '/': {
+            lang: 'zh-CN',
+            title: '',
+            home: '/'
+        },
+    },
     theme: defaultTheme({
+        logo: '/img/logo_light.png',
+        logoDark: '/img/logo_dark.png',
         // 默认主题配置
         navbar: [
-          {
-            text: '首页',
-            link: '/',
-          },
-          {
-            text: '人文社科',
-            link: '/humanities/',
-          },
+            {
+                text: '首页',
+                link: '/',
+            },
+            {
+                text: '神经网络',
+                link: '/humanities/',
+            },
         ],
-      }),
+    }),
 })
