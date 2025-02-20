@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.19" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme='dark'] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background-color: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const useChoice = localStorage.getItem('vuepress-color-scheme')
+      const systemStatus =
+        'matchMedia' in window
+          ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          : false
+
+      if (useChoice === 'light') {
+        document.documentElement.dataset.theme = 'light'
+      } else if (useChoice === 'dark' || systemStatus) {
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
+    <title></title><meta name="description" content="">
+    <link rel="preload" href="/pages/assets/style-tstkky8y.css" as="style"><link rel="stylesheet" href="/pages/assets/style-tstkky8y.css">
+    <link rel="modulepreload" href="/pages/assets/app-CogSM14N.js"><link rel="modulepreload" href="/pages/assets/404.html-ujVh1u0V.js">
+    <link rel="prefetch" href="/pages/assets/index.html-kRWf9VhM.js" as="script"><link rel="prefetch" href="/pages/assets/index.html-B6_fqiAD.js" as="script"><link rel="prefetch" href="/pages/assets/setupDevtools-7MC2TMWH-D7S3pJ7N.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="vp-theme-container" vp-container data-v-8636ca9b><main class="page" data-v-8636ca9b><div vp-content data-v-8636ca9b><h1 data-v-8636ca9b>404</h1><blockquote data-v-8636ca9b>That&#39;s a Four-Oh-Four.</blockquote><a class="route-link" href="/pages/" data-v-8636ca9b>Take me home</a></div></main></div><!--[--><!----><!--]--><!--]--></div>
+    <script type="module" src="/pages/assets/app-CogSM14N.js" defer></script>
+  </body>
+</html>
