@@ -4,6 +4,7 @@ import { defineUserConfig } from 'vuepress'
 
 export default defineUserConfig({
     bundler: viteBundler(),
+    base: '/pages/',
     // dest: '../hwang.github.io.pages/',
     // public: './',
     hostname: 'https://blog-docs.github.io/pages/',
