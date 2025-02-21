@@ -4,7 +4,7 @@ import { defineUserConfig } from 'vuepress'
 
 export default defineUserConfig({
     bundler: viteBundler(),
-    base: '/pages/',
+    // base: 'blog-docs.github.io',
     // dest: '../hwang.github.io.pages/',
     // public: './',
     // hostname: 'https://blog-docs.github.io/pages/',
@@ -12,7 +12,7 @@ export default defineUserConfig({
     //     '/': {
     //         lang: 'zh-CN',
     //         title: '',
-    //         home: '/'
+    //         home: '/docs/'
     //     },
     // },
     theme: defaultTheme({
