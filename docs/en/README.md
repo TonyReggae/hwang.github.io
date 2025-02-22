@@ -7,9 +7,9 @@ config:
     full: true
     background: tint-plate
     hero:
-      name: Theme Plume
-      tagline: VuePress Next Theme
-      text: A simple, feature-rich, document & blog
+      name: Hi👋I'm Hwang
+      tagline: Here are some footsteps exploring the world
+      text: Hope it brings you help and inspiration
       actions:
         -
           theme: brand

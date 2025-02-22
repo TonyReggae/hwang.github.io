@@ -1,41 +1,44 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defineUserConfig } from 'vuepress'
 import { plumeTheme } from 'vuepress-theme-plume'
-import { shikiPlugin } from '@vuepress-plume/plugin-shikiji'
+// import { shikiPlugin } from '@vuepress-plume/plugin-shikiji'
 
 export default defineUserConfig({
-  plugins: [
-    shikiPlugin({
-      languages: ['js', 'ts', 'html', 'css'], // 添加您使用的语言
-    }),],
+  // plugins: [
+  //   shikiPlugin({
+  //     languages: ['js', 'ts', 'html', 'css'], // 添加您使用的语言
+  //   }),],
   base: '/',
   lang: 'zh-CN',
   locales: {
     '/': {
-      // title: '',
+      // title: '| 首页',
       lang: 'zh-CN',
       description: 'Hwang的知识库',
     },
     '/en/': {
-      // title: '',
+      // title: '| Home',
       lang: 'en-US',
       description: "Hwang's knowledge base",
     },
   },
 
+
   head: [
     // 配置站点图标
     ['link', {
-      rel: 'icon', type: 'image/png',
-      src: '/favicon.ico',
-      // href: 'https://theme-plume.vuejs.press/favicon-32x32.png'
-    }],
+      rel: 'icon',
+      type: 'image/x-icon',
+      href: '/favicon.ico'
+    }
+    ],
   ],
 
   bundler: viteBundler(),
   shouldPrefetch: false, // 站点较大，页面数量较多时，不建议启用
 
   theme: plumeTheme({
+
     /* 添加您的部署域名, 有助于 SEO, 生成 sitemap */
     // hostname: 'https://your_site_url',
 
@@ -55,18 +58,24 @@ export default defineUserConfig({
      * @see https://theme-plume.vuejs.press/config/basic/#blog
      */
     // blog: false, // 禁用博客
-    // blog: {
-    //   postList: true, // 是否启用文章列表页
-    //   tags: true, // 是否启用标签页
-    //   archives: true, // 是否启用归档页
-    //   categories: true, // 是否启用分类页
-    //   postCover: 'right', // 文章封面位置
-    //   pagination: 15, // 每页显示文章数量
-    // },
+    blog: {
+      postList: true, // 是否启用文章列表页
+      tags: false, // 是否启用标签页
+      archives: true, // 是否启用归档页
+      categories: false, // 是否启用分类页
+      pagination: 15, // 每页显示文章数量
+      include: ['blog/**/*.md'],
+      // postCover: 'right', // 文章封面位置
+      postCover: {
+        layout: 'left',
+        ratio: '16:9',
+        width: 300,
+        compact: false
+      }
+    },
 
     /* 博客文章页面链接前缀 */
     article: '/article/',
-
     /**
      * 编译缓存，加快编译速度
      * @see https://theme-plume.vuejs.press/config/basic/#cache
@@ -88,13 +97,13 @@ export default defineUserConfig({
        * Shiki 代码高亮
        * @see https://theme-plume.vuejs.press/config/plugins/code-highlight/
        */
-      // shiki: {
-      //   // 强烈建议预设代码块高亮语言，插件默认加载所有语言会产生不必要的时间开销
-      //   languages: ['shell', 'bash', 'typescript', 'javascript'],
-      //   twoslash: true, // 启用 twoslash
-      //   whitespace: true, // 启用 空格/Tab 高亮
-      //   lineNumbers: true, // 启用行号
-      // },
+      shiki: {
+        // 强烈建议预设代码块高亮语言，插件默认加载所有语言会产生不必要的时间开销
+        languages: ['shell', 'bash', 'typescript', 'javascript'],
+        twoslash: true, // 启用 twoslash
+        whitespace: true, // 启用 空格/Tab 高亮
+        lineNumbers: true, // 启用行号
+      },
 
       /* 本地搜索, 默认启用 */
       // search: true,
