@@ -59,8 +59,9 @@ export default defineUserConfig({
       archives: true, // 是否启用归档页
       categories: true, // 是否启用分类页
       pagination: 15, // 每页显示文章数量
-      include: ['blog/**/*.md'],
+      include: ['学杂了/**/*.md'],
       // postCover: 'right', // 文章封面位置
+      categoriesExpand: 'deep',
       postCover: {
         layout: 'left',
         ratio: '16:9',
@@ -94,7 +95,7 @@ export default defineUserConfig({
        */
       shiki: {
         // 强烈建议预设代码块高亮语言，插件默认加载所有语言会产生不必要的时间开销
-        languages: ['shell', 'bash', 'typescript', 'javascript','java'],
+        languages: ['shell', 'bash', 'typescript', 'javascript', 'java'],
         twoslash: true, // 启用 twoslash
         whitespace: true, // 启用 空格/Tab 高亮
         lineNumbers: true, // 启用行号
