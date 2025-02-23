@@ -22,7 +22,7 @@ export default defineThemeConfig({
    * 文章版权信息
    * @see https://theme-plume.vuejs.press/guide/features/copyright/
    */
-  copyright: true,
+  copyright: false,
 
   prevPage: true,   // 是否启用上一页链接
   nextPage: true,   // 是否启用下一页链接
@@ -47,12 +47,12 @@ export default defineThemeConfig({
        * @see https://theme-plume.vuejs.press/config/basic/#profile
        */
       profile: {
-        name: 'Hwang',
-        description: '八平米的星光',
+        name: '@Hwang',
+        description: '🪄 I have a magic wand that can fill an eight-square-meter space with starlight.',
         avatar: '/img/avatar.png',
-        location: '中国-浙江-杭州',
-        organization: '浙江工业大学',
-        circle: true, // 是否为圆形头像
+        // location: 'Hangzhou, China',
+        // organization: 'Hogwarts School',
+        circle: false, // 是否为圆形头像
         layout: 'right', // 个人信息在左侧还是右侧，'left' | 'right'
       },
 

@@ -1,13 +1,8 @@
 import { viteBundler } from '@vuepress/bundler-vite'
 import { defineUserConfig } from 'vuepress'
 import { plumeTheme } from 'vuepress-theme-plume'
-// import { shikiPlugin } from '@vuepress-plume/plugin-shikiji'
 
 export default defineUserConfig({
-  // plugins: [
-  //   shikiPlugin({
-  //     languages: ['js', 'ts', 'html', 'css'], // 添加您使用的语言
-  //   }),],
   base: '/',
   lang: 'zh-CN',
   locales: {
@@ -62,7 +57,7 @@ export default defineUserConfig({
       postList: true, // 是否启用文章列表页
       tags: false, // 是否启用标签页
       archives: true, // 是否启用归档页
-      categories: false, // 是否启用分类页
+      categories: true, // 是否启用分类页
       pagination: 15, // 每页显示文章数量
       include: ['blog/**/*.md'],
       // postCover: 'right', // 文章封面位置
@@ -99,10 +94,11 @@ export default defineUserConfig({
        */
       shiki: {
         // 强烈建议预设代码块高亮语言，插件默认加载所有语言会产生不必要的时间开销
-        languages: ['shell', 'bash', 'typescript', 'javascript'],
+        languages: ['shell', 'bash', 'typescript', 'javascript','java'],
         twoslash: true, // 启用 twoslash
         whitespace: true, // 启用 空格/Tab 高亮
         lineNumbers: true, // 启用行号
+        theme: 'one-light', // 主题
       },
 
       /* 本地搜索, 默认启用 */
