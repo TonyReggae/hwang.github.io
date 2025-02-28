@@ -14,12 +14,18 @@ const zhNIONote = defineNoteConfig({
   sidebar: 'auto'
 })
 
+const zhOSNote = defineNoteConfig({
+  dir: 'os',
+  link: '/os',
+  sidebar: 'auto'
+})
+
 
 export const zhNotes = defineNotesConfig({
-  dir: 'notes',
+  dir: '/notes/zh/',
   link: '/',
   notes: [
-    zhNIONote
+    zhNIONote, zhOSNote
   ],
 })
 
@@ -34,11 +40,11 @@ export const zhNotes = defineNotesConfig({
 // })
 
 export const enNotes = defineNotesConfig({
-  dir: 'en/notes',
-  link: '/en/',
+  dir: '/notes',
+  link: '/',
   notes: [
     // enDemoNote,
-    zhNIONote
+    zhNIONote, zhOSNote
   ],
 })
 
